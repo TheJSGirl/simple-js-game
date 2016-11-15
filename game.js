@@ -60,14 +60,18 @@ function init() {
     // });
     
 
-    $(document).on('touchstart touchmove mousedown','#mycanvas', function(e){
-        player.isMoving = true;
-    });
+    $(document).ready(function(){
+        $('#mycanvas').on('touchstart touchmove mousedown', function(e){
+            player.isMoving = true;
+        });
+    })
 
 
-    $(document).on('touchend mouseup','#mycanvas', function(e){
-        player.isMoving = false;
-    });
+    $(document).ready(function(){
+        $('#mycanvas').on('touchend mouseup', function(e){
+            player.isMoving = false;
+        });  
+    })
   
   
     
